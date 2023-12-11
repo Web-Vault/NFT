@@ -1,0 +1,49 @@
+PAGE 1   ---   HOME PAGE  
+		|
+		|
+	HEADER PART  [ DONE ]
+
+	HERO SECTION   ---->> RE-DIRECTION TO COLLECTION GELLERY  [ DONE ]
+
+	DIV { FLEX }  ---->>   1   INNER DIV   ---->>  WHAT IS NFT?  ---->> RE-DIRECTION TO BLOG  [ DONE ]
+		          |
+		      ----->>   2   INNER DIV  ----->>  BOOK NFT   ---->>  RE-DIRECTION TO BOOKING PAGE 
+	FOOTER PART 
+
+
+PAGE 2   ---   COLLECTION GALLERY 
+		|
+		|
+	HEADER PART  [ DONE ]
+
+	HERO SECTION  ---->> GALLERY   ---->> ON CLICK REDIRECT TO PURCHASE   ------------|	[ DONE ]											   |
+										   |
+	FOOTER PART							        	   |
+										   |
+									              	   |
+PAGE 3   ---   BLOG AND FAQ		[ DONE ]						   |
+		|		                         					   |
+		|							        	   |
+	DETAILS AND SUMMERY TAGS ---->> QUESTION AND ANSWERS ABOUT NFT 	   |
+	FOOTER PART	[ DONE ]						        	   |
+					       				        	   |	
+PAGE 4   ---   LOCATE US							            	   |												   										   |
+									        	   |		
+PAGE 5   ---   CONTACTS							           	   |
+									        	   |
+PAGE 6   ---   PURCHASE	---------------------------------------------------------------------------------------------------------------------------------|
+		|
+		|
+	IF ( PASSWORD == " " )
+	{
+		SHOW SIGN UP FORM
+	} 
+	ELSE 
+	{
+		ENTER PASSWORD
+
+		IF ( PASSWORD == OLD_PASSWORD )
+		{
+			SHOW PURCHASE FORM
+		}
+	}

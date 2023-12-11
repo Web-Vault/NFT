@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+          <title>NFT STORE | GALLERY</title>
+
+          <!-- <link rel="stylesheet" href="CSS/COLLECTION.CSS"> -->
+
+          <style>
+                    * {
+                              box-sizing: border-box;
+                    }
+
+                    body {
+                              margin: 0;
+                              padding: 0;
+                              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                              line-height: 1.6px;
+                              background-image: url(IMAGES/HOME-PAGE-BACKGROUND.jpg);
+                              background-size: cover;
+                              background-attachment: fixed;
+                    }
+
+                    /* header */
+
+                    header {
+                              background-color: rgba(255, 255, 255, 0.35);
+                              color: #000;
+                              padding: 20px;
+                              text-align: right;
+                              border-radius: 5px;
+                    }
+
+                    header .none {
+                              margin-left: 2%;
+                              color: #fff;
+                              font-size: x-large;
+                              text-decoration: none;
+                    }
+
+                    header .none:hover {
+                              color: #222;
+                              /* font-size: xx-large; */
+                              text-decoration: underline;
+                              /* transition: 0.5s ease-in-out; */
+                              transition: 0.51s ease;
+                    }
+
+                    header .none:active {
+                              text-decoration: underline;
+                              color: #222;
+                    }
+
+                    header img {
+                              height: 85px;
+                              width: 85px;
+                              float: left;
+                              margin-top: -17px;
+                              margin-left: -10px;
+                    }
+
+                    /* grid images */
+
+                    .grid-select {
+                              text-align: center;
+                              padding: 3%;
+                              background-color: #c4dce244;
+                              width: max-content;
+                              height: auto;
+                              margin: 0.5% auto;
+                              border-radius: 10px;
+                    }
+
+                    .row {
+                              display: flex;
+                              flex-wrap: wrap;
+                              padding: 0 4px;
+                              background-color: #c4dce244;
+                              backdrop-filter: blur(10px);
+                              border-radius: 10px;
+                    }
+
+                    .column {
+                              flex: 25%;
+                              padding: 0 4px;
+                    }
+
+                    .column img {
+                              margin-top: 8px;
+                              vertical-align: middle;
+                    }
+
+                    .img {
+                              padding: 5px;
+                              width: 100%;
+                    }
+
+                    .btn {
+                              border: none;
+                              outline: none;
+                              padding: 10px 16px;
+                              background-color: #f1f1f1;
+                              cursor: pointer;
+                              font-size: 18px;
+                    }
+
+                    .btn:hover {
+                              background-color: #666;
+                              color: white;
+                    }
+
+
+                    @media screen and (max-width: 768px) {
+
+                              header {
+                                        padding: 15px;
+                                        text-align: center;
+                              }
+
+                              header .none {
+                                        font-size: 18px;
+                                        margin-left: 0;
+                              }
+
+                              header img {
+                                        display: none;
+                              }
+
+                              .grid-select {
+                                        padding: 2%;
+                              }
+
+                              .row {
+                                        padding: 0;
+                              }
+
+                              .column {
+                                        flex: 50%;
+                                        padding: 2px;
+                              }
+
+                              .column img {
+                                        margin-top: 4px;
+                              }
+
+                              .img {
+                                        padding: 3px;
+                              }
+
+                              .btn {
+                                        font-size: 16px;
+                                        padding: 8px 14px;
+                              }
+
+                              .btn:hover {
+                                        background-color: #666;
+                                        color: white;
+                              }
+                    }
+          </style>
+
+</head>
+
+<body style="background-image: url(IMAGES/HOME-PAGE-BACKGROUND.jpg);">
+
+          <header>
+                    <!-- <a href="home.html"><img src="images/crypto-icon-depositphotos-bgremover.png" alt="logo"></a> -->
+                    <h1>
+                              <nav>
+                                        <a href="index.html" class="none">Home</a>
+                                        <a href="collection.html" class="none">NFTs</a>
+                                        <a href="faq.html" class="none">Know More </a>
+                                        <!-- <a href="#">About</a> -->
+                                        <a href="contact.html" class="none">Contact</a>
+                              </nav>
+                    </h1>
+          </header>
+
+          <div class="grid-select" id="myHeader">
+                    <button class="btn" onclick="one()">1</button>
+                    <button class="btn" onclick="two()">2</button>
+                    <button class="btn hide" onclick="four()">4</button>
+          </div>
+
+          <div>
+
+                    <div class="row">
+                              <div class="column">
+                                        <a href="purchase.html?image=COLLECTION/1NFT-MONKEY.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/1NFT-MONKEY.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/2NFT.jpg" class="purchase"> <img
+                                                            class="img" src="COLLECTION/2NFT.jpg">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/3NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/3NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/4NFT.jpg" class="purchase"> <img
+                                                            class="img" src="COLLECTION/4NFT.jpg">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/5NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/5NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/6NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/6NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/7NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/7NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/27NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/27NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/35NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/35NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/36NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/36NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/43NFT.jpg" class="purchase"> <img
+                                                            class="img" src="COLLECTION/43NFT.jpg">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/44NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/44NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/51NFT.jpg" class="purchase"> <img
+                                                            class="img" src="COLLECTION/51NFT.jpg">
+
+                                        </a>
+                              </div>
+                              <div class="column">
+                                        <a href="purchase.html?image=COLLECTION/8NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/8NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/9NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/9NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/10NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/10NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/11.NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/11.NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/15NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/15NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/16NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/16NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/28NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/28NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/33NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/33NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/37NFT.jpg" class="purchase"> <img
+                                                            class="img" src="COLLECTION/37NFT.jpg">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/42NFT.jpg" class="purchase"> <img
+                                                            class="img" src="COLLECTION/42NFT.jpg">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/45NFT.jpg" class="purchase"> <img
+                                                            class="img" src="COLLECTION/45NFT.jpg">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/50NFT.jpg" class="purchase"> <img
+                                                            class="img" src="COLLECTION/50NFT.jpg">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/52NFT.jpg" class="purchase"> <img
+                                                            class="img" src="COLLECTION/52NFT.jpg">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/53NFT.jpg" class="purchase"> <img
+                                                            class="img" src="COLLECTION/53NFT.jpg">
+
+                                        </a>
+                              </div>
+                              <div class="column">
+                                        <a href="purchase.html?image=COLLECTION/17NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/17NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/18NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/18NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/19NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/19NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/20NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/20NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/21NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/21NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/22NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/22NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/23NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/23NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/29NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/29NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/34NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/34NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/38NFT.jpg" class="purchase"> <img
+                                                            class="img" src="COLLECTION/38NFT.jpg">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/41NFT.jpg" class="purchase"> <img
+                                                            class="img" src="COLLECTION/41NFT.jpg">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/46NFT.jpg" class="purchase"> <img
+                                                            class="img" src="COLLECTION/46NFT.jpg">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/47NFT.jpg" class="purchase"> <img
+                                                            class="img" src="COLLECTION/47NFT.jpg">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/54NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/54NFT.png">
+
+                                        </a>
+                              </div>
+                              <div class="column">
+                                        <a href="purchase.html?image=COLLECTION/24NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/24NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/12NFT.jpg" class="purchase"> <img
+                                                            class="img" src="COLLECTION/12NFT.jpg">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/13NFT.jpg" class="purchase"> <img
+                                                            class="img" src="COLLECTION/13NFT.jpg">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/14NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/14NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/25NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/25NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/26NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/26NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/30NFT.png"" class=" purchase"> <img
+                                                            class="img" src="COLLECTION/30NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/31NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/31NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/32NFT.png" class="purchase"> <img
+                                                            class="img" src="COLLECTION/32NFT.png">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/39NFT.jpg" class="purchase"> <img
+                                                            class="img" src="COLLECTION/39NFT.jpg">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/40NFT.jpg" class="purchase"> <img
+                                                            class="img" src="COLLECTION/40NFT.jpg">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/47NFT.jpg" class="purchase"> <img
+                                                            class="img" src="COLLECTION/47NFT.jpg">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/48NFT.jpg" class="purchase"> <img
+                                                            class="img" src="COLLECTION/48NFT.jpg">
+
+                                        </a>
+                                        <a href="purchase.html?image=COLLECTION/55NFT.jpg" class="purchase"> <img
+                                                            class="img" src="COLLECTION/55NFT.jpg">
+
+                                        </a>
+                              </div>
+                    </div>
+
+          </div>
+
+          <script>
+                    var elements = document.getElementsByClassName("column");
+
+                    var i;
+
+                    function one() {
+                              for (i = 0; i < elements.length; i++) {
+                                        elements[i].style.flex = "100%";
+                              }
+                    }
+
+                    function two() {
+                              for (i = 0; i < elements.length; i++) {
+                                        elements[i].style.flex = "50%";
+                              }
+                    }
+
+                    function four() {
+                              for (i = 0; i < elements.length; i++) {
+                                        elements[i].style.flex = "25%";
+                              }
+                    }
+          </script>
+</body>
+
+<script src="jquery-3.7.1.min.js"></script>
+<script>
+          
+          $('.img').hover(function () {
+                    $(this).animate({ opacity: 0.7 }, 'fast');
+          }, function () {
+                    $(this).animate({ opacity: 1 }, 'fast');
+          });
+
+</script>
+
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+
+          <!-- <link rel="stylesheet" href="CSS/CONFIRM.CSS"> -->
+
+          <style>
+                    * {
+                              box-sizing: border-box;
+                    }
+
+                    body {
+                              margin: 0;
+                              padding: 0;
+                              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                              background-image: url(IMAGES/HOME-PAGE-BACKGROUND.jpg);
+                              background-size: cover;
+                              background-attachment: fixed;
+                              color: #fff;
+
+                    }
+
+                    /* header */
+
+                    header {
+                              background-color: rgba(255, 255, 255, 0.35);
+                              color: #000;
+                              padding: 20px;
+                              text-align: right;
+                              border-radius: 5px;
+                              line-height: 1.6px;
+                    }
+
+                    header .none {
+                              margin-left: 2%;
+                              color: #fff;
+                              font-size: x-large;
+                              text-decoration: none;
+                    }
+
+                    header .none:hover {
+                              color: #222;
+                              /* font-size: xx-large; */
+                              text-decoration: underline;
+                              /* transition: 0.5s ease-in-out; */
+                              transition: 0.51s ease;
+                    }
+
+                    header .none:active {
+                              text-decoration: underline;
+                              color: #222;
+                    }
+
+                    header img {
+                              height: 85px;
+                              width: 85px;
+                              float: left;
+                              margin-top: -17px;
+                              margin-left: -10px;
+                    }
+
+                    .form {
+                              width: 35%;
+                              border: 1px solid white;
+                              border-radius: 0.551em;
+                              margin: 5% auto;
+                              padding: 1%;
+                              justify-content: space-between;
+                              backdrop-filter: blur(5px);
+                    }
+
+                    .purchase-form {
+                              /* border: 1px solid white; */
+                              margin: auto;
+                    }
+
+                    .details {
+                              /* border: 1px solid white; */
+                              margin: 1%;
+                    }
+
+                    .bank-details {
+                              /* border: 1px solid white; */
+                              margin: 1%;
+                    }
+
+                    .proceed-purchase {
+                              background-color: rgba(34, 34, 34, 0.7);
+                              /* border: 1px solid white; */
+                              margin: 1%;
+                    }
+
+                    .text {
+                              /* border: 1px solid black; */
+                              background-color: rgba(34, 34, 34, 0.7);
+                              margin: 1%;
+                              padding: 2%;
+                              font-size: 20px;
+                              font-variant: small-caps;
+                    }
+
+                    .sign {
+                              background-color: #222;
+                    }
+
+                    .signup {
+                              font-size: 25px;
+                              margin: auto auto;
+                              display: block;
+                              font-variant: small-caps;
+                              text-align: center;
+                    }
+
+                    .input,
+                    input {
+                              padding: 2%;
+                    }
+
+                    input {
+                              padding: 3%;
+                              background-color: transparent;
+                              border: none;
+                              border-bottom: 1px solid white;
+                              font-size: 15px;
+                              height: 50px;
+                              color: #fff;
+                              width: 100%;
+                    }
+
+                    .submit {
+                              background-color: rgba(34, 34, 34, 0.7);
+                              margin: 1%;
+                              padding: 3%;
+                              font-size: 20px;
+                              text-align: center;
+                              background-color: #222;
+                              border-radius: 0.51rem;
+                    }
+
+                    .btn {
+                              text-decoration: none;
+                              color: #fff;
+                              width: 25%;
+                              height: 40px;
+                              padding: 8px;
+                              border-radius: 5px;
+                              /* border: 2px solid rgb(224, 224, 224); */
+                              font-variant: small-caps;
+                              /* background-color: white; */
+                              transition: all 0.2s ease-in-out 0ms;
+                    }
+
+                    @media screen and (max-width: 768px) {
+                              body {
+                                        background-size: 100%;
+                              }
+
+                              header {
+                                        padding: 15px;
+                                        text-align: center;
+                                        background-color: rgba(255, 255, 255, 0.7);
+                                        border-radius: 0;
+                              }
+
+                              header .none {
+                                        font-size: 20px;
+                              }
+
+                              header img {
+                                        height: 60px;
+                                        width: 60px;
+                              }
+
+                              /* Form enhancements */
+                              .form {
+                                        width: 90%;
+                                        /* Wider form for better responsiveness */
+                                        margin: 5% auto;
+                                        padding: 2%;
+                                        /* Increase padding for form elements */
+                                        justify-content: center;
+                                        /* Center content within the form */
+                              }
+
+                              .purchase-form,
+                              .details,
+                              .bank-details {
+                                        margin: 3% auto;
+                                        /* Adjust margins for these sections */
+                              }
+
+                              .proceed-purchase {
+                                        margin: 3% auto;
+                                        /* Adjust margin for the proceed-purchase button */
+                              }
+
+                              /* Text enhancements */
+                              .text {
+                                        font-size: 18px;
+                                        /* Reduce font size for better readability */
+                                        padding: 2%;
+                                        /* Adjust padding for text elements */
+                              }
+
+                              /* Signup enhancements */
+                              .signup {
+                                        font-size: 22px;
+                                        /* Adjust font size for signup */
+                                        margin: 3% auto;
+                                        /* Adjust margin for the signup element */
+                                        text-align: center;
+                              }
+
+                              /* Input and Button enhancements */
+                              .input,
+                              input {
+                                        padding: 3%;
+                                        /* Increase padding for input elements */
+                              }
+
+                              input {
+                                        font-size: 14px;
+                                        /* Reduce input font size for better visibility */
+                                        height: 45px;
+                                        /* Adjust input height */
+                              }
+
+                              .submit {
+                                        padding: 1.5rem;
+                                        font-size: 18px;
+                              }
+
+                              .btn {
+                                        width: 50%;
+                                        /* Wider buttons for better touch interaction */
+                                        height: 35px;
+                                        /* Adjust button height */
+                                        padding: 6px;
+                                        /* Adjust button padding */
+                              }
+                    }
+
+                    /* Add shake animation */
+                    .shake {
+                              animation: shake 0.5s;
+                    }
+
+                    @keyframes shake {
+
+                              0%,
+                              100% {
+                                        transform: translateX(0);
+                              }
+
+                              10%,
+                              30%,
+                              50%,
+                              70%,
+                              90% {
+                                        transform: translateX(-10px);
+                              }
+
+                              20%,
+                              40%,
+                              60%,
+                              80% {
+                                        transform: translateX(10px);
+                              }
+                    }
+
+
+                    /* Add highlight animation */
+                    .highlight {
+                              background-color: #ffeeba;
+                              /* or any other color */
+                              transition: background-color 0.3s ease;
+                    }
+
+                    /* Add slide-down effect for error message */
+                    .error-message {
+                              display: none;
+                              padding: 10px;
+                              background-color: #f8d7da;
+                              border: 1px solid #f5c6cb;
+                              color: #721c24;
+                    }
+          </style>
+
+          <style>
+
+          </style>
+</head>
+
+<body style="background-image: url(IMAGES/HOME-PAGE-BACKGROUND.jpg);">
+          <header>
+                    <!-- <a href="home.html"><img src="images/crypto-icon-depositphotos-bgremover.png" alt="logo"></a> -->
+                    <h1>
+                              <nav>
+                                        <a href="index.html" class="none">Home</a>
+                                        <a href="collection.html" class="none">NFTs</a>
+                                        <a href="faq.html" class="none">Know More </a>
+                                        <a href="contact.html" class="none">Contact</a>
+                              </nav>
+                    </h1>
+          </header>
+
+          <main>
+                    <div class="confirm">
+                              <div class="form">
+                                        <form action="" onsubmit="return(validate())">
+                                                  <div class="text sign">
+                                                            <label class="signup">your details</label>
+                                                  </div>
+
+                                                  <hr style="color: #fff; margin: 20px 10px;">
+
+                                                  <div class="text">
+                                                            <label class="in-text">Card Number</label>
+                                                  </div>
+                                                  <div class="input">
+                                                            <input type="text" name="name" id="name"
+                                                                      placeholder="Card Number">
+                                                  </div>
+
+                                                  <div class="error">
+                                                            <span id="name_error"></span>
+                                                  </div>
+
+                                                  <div class="text">
+                                                            <label class="in-text">CVV</label>
+                                                  </div>
+                                                  <div class="input">
+                                                            <input type="password" name="email" id="email"
+                                                                      placeholder="Email">
+                                                  </div>
+
+                                                  <div class="error">
+                                                            <span id="email_error"></span>
+                                                  </div>
+
+                                                  <div class="submit">
+                                                            <a href="index.html" class="btn" target=""> submit</a>
+                                                  </div>
+                              </div>
+                    </div>
+          </main>
+
+          <script src="jquery-3.7.1.min.js"></script>
+          <script>
+                    $(document).ready(function () {
+                              // Highlight effect on focus
+                              $("#name").focus(function () {
+                                        $(this).addClass("highlight");
+                              });
+
+                              $("#name").blur(function () {
+                                        $(this).removeClass("highlight");
+                              });
+
+                              $("form").submit(function (event) {
+                                        event.preventDefault();
+                                        // Reset previous error messages and shake effect
+                                        $(".error-message").text('');
+                                        $(".input").removeClass("shake");
+
+                                        var cardNumber = $("#name").val();
+                                        var cvv = $("#email").val();
+                                        var cardNumberError = $("#name_error");
+                                        var cvvError = $("#email_error");
+                                        var isValid = true;
+
+                                        if (!/^\d{16}$/.test(cardNumber)) {
+                                                  cardNumberError.text('Please enter a valid 16-digit card number.');
+                                                  isValid = false;
+                                        }
+
+                                        // Validation for CVV
+                                        if (!/^\d{3}$/.test(cvv)) {
+                                                  cvvError.text('Please enter a valid 3-digit CVV.');
+                                                  isValid = false;
+                                        }
+
+                                        // Shake effect on invalid input
+                                        if (!isValid) {
+                                                  $(".input").addClass("shake");
+                                                  setTimeout(function () {
+                                                            $(".input").removeClass("shake");
+                                                  }, 500);
+                                        }
+
+                                        return isValid;
+                              });
+                    });
+          </script>
+
+
+</body>
+
+</html>

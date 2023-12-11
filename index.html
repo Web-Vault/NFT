@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+          <title>NFT STORE</title>
+
+          <!-- <link rel="stylesheet" href="CSS/STYLES.CSS"> -->
+
+          <style>
+                    html {
+                              scroll-behavior: smooth;
+                    }
+
+                    body,
+                    h1,
+                    h2,
+                    h3,
+                    p,
+                    ul,
+                    li {
+                              margin: 0;
+                              padding: 0;
+                    }
+
+                    body {
+                              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                              line-height: 1.6;
+                              background-image: url(IMAGES/HOME-PAGE-BACKGROUND.jpg);
+                              background-size: cover;
+                              background-attachment: fixed;
+                    }
+
+                    header {
+                              background-color: rgba(255, 255, 255, 0.35);
+                              color: #000;
+                              padding: 20px;
+                              text-align: right;
+                              border-radius: 5px;
+                    }
+
+                    header .none {
+                              margin-left: 2%;
+                              color: #fff;
+                              font-size: x-large;
+                              text-decoration: none;
+                    }
+
+                    .display {
+                              display: none;
+                    }
+
+                    header .none:hover {
+                              color: #222;
+                              /* font-size: xx-large; */
+                              text-decoration: underline;
+                              /* transition: 0.5s ease-in-out; */
+                              transition: 0.51s ease;
+                    }
+
+                    header .none:focus {
+                              text-decoration: underline;
+                              color: #222;
+                    }
+
+                    header img {
+                              height: 85px;
+                              width: 85px;
+                              float: left;
+                              margin-top: -17px;
+                              margin-left: -10px;
+                    }
+
+                    .hero {
+                              /* background-image: url(section.png); */
+                              background-position: center;
+                              /* filter: blur(3px); */
+                              /* border: 1px solid black; */
+                              border-radius: 2%;
+                              height: 600px;
+                              /* width: 800px; */
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                    }
+
+                    .hero-content {
+                              margin: auto;
+                              width: 40%;
+                              text-align: center;
+                              padding: 3%;
+                              border-radius: 0.51rem;
+                              /* border: 1px solid black; */
+                              background-color: rgba(255, 255, 255, 0.75);
+                              /* background-image: url(section.png); */
+                    }
+
+                    .hero h2 {
+                              font-size: 40px;
+                              color: #000;
+                              margin-bottom: 20px;
+                    }
+
+                    .hero p {
+                              font-size: 18px;
+                              color: #000;
+                              margin-bottom: 30px;
+                    }
+
+                    .btn {
+                              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                              display: inline-block;
+                              width: 100px;
+                              height: auto;
+                              padding: 10px 20px;
+                              margin-bottom: 5px;
+                              background-color: #333;
+                              color: #fff;
+                              text-decoration: none;
+                              border-radius: 5px;
+                              transition: background-color 0.3s ease;
+                    }
+
+                    .btn:hover {
+                              background-color: #555;
+                    }
+
+                    .featured {
+                              padding: 40px;
+                              text-align: center;
+                              /* border: 1px solid black; */
+                              border-radius: 10px;
+                              background-color: rgba(255, 255, 255, 0.55);
+                    }
+
+                    .featured h2 {
+                              font-size: 32px;
+                              margin-bottom: 30px;
+                    }
+
+                    .post-container {
+                              display: flex;
+                              justify-content: center;
+                    }
+
+                    .nft-redirection {
+                              /* border: 1px solid black; */
+                              background-color: rgba(255, 255, 255, 0.55);
+                              border-radius: 0.21rem;
+                              width: 35%;
+                              height: auto;
+                              margin: auto;
+                              display: none;
+                    }
+
+                    .r-image,
+                    .redirect-to-blog {
+                              /* border: 1px solid black; */
+                              margin: auto;
+                    }
+
+                    .nft-director {
+                              margin: 5%;
+                              width: 60%;
+                    }
+
+                    .re-direction-text {
+                              width: 50%;
+                              margin: 5% auto;
+                    }
+
+
+                    @media (max-width: 768px) {
+                              body {
+                                        font-size: 16px;
+                              }
+
+                              header {
+                                        padding: 15px;
+                                        text-align: center;
+                              }
+
+                              header .none {
+                                        font-size: 18px;
+                                        margin-left: 0;
+                              }
+
+                              header img {
+                                        display: none;
+                              }
+
+
+                              .hero {
+                                        height: auto;
+                                        margin: 10% auto;
+                              }
+
+                              .hero-content {
+                                        padding: 1%;
+                                        width: 85%;
+                              }
+
+                              .hero h2 {
+                                        font-size: 30px;
+                              }
+
+                              .hero p {
+                                        font-size: 16px;
+                              }
+
+                              .featured {
+                                        padding: 20px;
+                              }
+
+                              .featured h2 {
+                                        font-size: 28px;
+                              }
+
+                              .post-container {
+                                        flex-direction: column;
+                                        align-items: center;
+                              }
+
+                              .nft-redirection {
+                                        width: 90%;
+                                        margin: 5% auto;
+                              }
+
+                              .nft-director {
+                                        width: 80%;
+                              }
+
+                              .re-direction-text {
+                                        width: 70%;
+                              }
+                    }
+          </style>
+
+
+          <script src="jquery-3.7.1.min.js"></script>
+
+</head>
+
+<body style="background-image: url(IMAGES/HOME-PAGE-BACKGROUND.jpg);">
+          <header>
+                    <!-- <a href="home.html"><img src="images/crypto-icon-depositphotos-bgremover.png" alt="logo"></a> -->
+                    <h1>
+                              <nav>
+                                        <a href="index.html" class="none">Home</a>
+                                        <a href="collection.html" class="none">NFTs</a>
+                                        <a href="faq.html" class="none">Know More </a>
+                                        <a href="contact.html" class="none">Contact</a>
+                              </nav>
+                    </h1>
+          </header>
+
+          <section class="hero">
+                    <div class="hero-content" id="fade">
+                              <h2>Discover Amazing NFTs</h2>
+                              <p>Explore a world of Crypto-Images articles and dive into exciting Non-Fungible Tokens.
+                              </p>
+                              <a href="faq.html" class="btn">Read More</a>
+                    </div>
+          </section>
+
+          <section class="featured">
+                    <h2>Featured Posts</h2>
+                    <div class="post-container">
+                              <div class="nft-redirection">
+                                        <div class="r-image"> <img src="IMAGES/NFT-RE-DIRECTION.jpg" alt="NFT"
+                                                            class="nft-director"> </div>
+                                        <div class="redirect-to-blog">
+
+                                                  <p class="re-direction-text">NFTs: Digital fingerprints for owning the
+                                                            unique in a blockchain world.</p>
+
+                                                  <a href="faq.html" class="btn" style="margin-bottom:4%;"> What Is NFT
+                                                            ? </a>
+                                        </div>
+                              </div>
+                              <div class="nft-redirection">
+                                        <div class="redirect-to-blog">
+                                                  <p class="re-direction-text">NFTs: Where digital meets individual,
+                                                            making uniqueness digital.</p>
+                                                  <a href="collection.html" class="btn"> Purchase NFT </a>
+                                        </div>
+                                        <div class="r-image"> <img src="IMAGES/NFT-RE-DIRECTION-1.jpg" alt="NFT"
+                                                            class="nft-director" style="margin-bottom:5%;"> </div>
+                              </div>
+                    </div>
+          </section>
+</body>
+
+<script>
+          $(document).ready(function () {
+
+                    $(document).ready(function () {
+
+                              $(".hero-content").hide().fadeIn(1000);
+
+                              $(".btn").hover(
+                                        function () {
+                                                  // Mouse enters the element (hover in)
+                                                  $(this).animate({ width: '150px', height: '50px', textAlign: 'center' }, 200);
+                                        },
+                                        function () {
+                                                  $(this).animate({ width: '100px', height: '25px' }, 200);
+                                        }
+                              );
+
+                              $(".hero-content").mouseenter(function () {
+                                        $(".nft-redirection").slideDown(2000);
+                              });
+
+                    });
+
+          });
+</script>
+
+</html>

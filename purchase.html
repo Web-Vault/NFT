@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sign Up</title>
+	<!-- <link rel="stylesheet" href="CSS/PURCHASE.CSS"> -->
+
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+			background-image: url(IMAGES/HOME-PAGE-BACKGROUND.jpg);
+			background-size: cover;
+			background-attachment: fixed;
+		}
+
+		/* header */
+
+		header {
+			background-color: rgba(255, 255, 255, 0.35);
+			color: #000;
+			padding: 20px;
+			text-align: right;
+			border-radius: 5px;
+			line-height: 1.6px;
+		}
+
+		header .none {
+			margin-left: 2%;
+			color: #fff;
+			font-size: x-large;
+			text-decoration: none;
+		}
+
+		header .none:hover {
+			color: #222;
+			/* font-size: xx-large; */
+			text-decoration: underline;
+			/* transition: 0.5s ease-in-out; */
+			transition: 0.51s ease;
+		}
+
+		header .none:active {
+			text-decoration: underline;
+			color: #222;
+		}
+
+		header img {
+			height: 85px;
+			width: 85px;
+			float: left;
+			margin-top: -17px;
+			margin-left: -10px;
+		}
+
+		.container {
+			/* border: 1px solid white; */
+			/* margin: 10% auto; */
+			margin: auto;
+			padding: 1%;
+			color: #fff;
+		}
+
+		.form {
+			/* border: 1px solid white; */
+			border: 1px solid white;
+			border-radius: 1rem;
+			width: 70%;
+			margin: auto;
+			padding: 0.5em;
+			backdrop-filter: blur(5px);
+		}
+
+		.text {
+			/* border: 1px solid black; */
+			background-color: rgba(34, 34, 34, 0.7);
+			margin: 1%;
+			padding: 2%;
+			font-size: 20px;
+			font-variant: small-caps;
+		}
+
+		.sign {
+			background-color: #222;
+		}
+
+		.signup {
+			font-size: 25px;
+			margin: auto auto;
+			display: block;
+			font-variant: small-caps;
+			text-align: center;
+		}
+
+		.input,
+		input {
+			padding: 2%;
+		}
+
+		input {
+			padding: 3%;
+			background-color: transparent;
+			border: none;
+			border-bottom: 1px solid white;
+			font-size: 15px;
+			height: 50px;
+			color: #fff;
+			width: 100%;
+		}
+
+		.submit {
+			background-color: rgba(34, 34, 34, 0.7);
+			margin: 1%;
+			padding: 3%;
+			font-size: 20px;
+			text-align: center;
+			background-color: #222;
+			border-radius: 0.51rem;
+		}
+
+		.btn {
+			text-decoration: none;
+			color: #fff;
+			width: 25%;
+			height: 40px;
+			padding: 8px;
+			border-radius: 5px;
+			/* border: 2px solid rgb(224, 224, 224); */
+			font-variant: small-caps;
+			/* background-color: white; */
+			transition: all 0.2s ease-in-out 0ms;
+		}
+
+		main {
+			display: flex;
+		}
+
+		.purchase-image,
+		.container {
+			flex-basis: 50%;
+			/* border: 1px solid white; */
+			color: #fff;
+		}
+
+		.clicked-image {
+			/* border: 1px solid white; */
+			margin: 8%;
+			width: auto;
+			height: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 1%;
+		}
+
+		.selected-image {
+			margin: auto;
+			width: 80%;
+			border-radius: 1em;
+		}
+
+		.purch-amt {
+			display: block;
+			border: 1px solid white;
+			border-radius: 0.51em;
+			width: fit-content;
+			padding: 3%;
+			margin: 10% auto;
+			background-color: #222;
+		}
+
+		@media screen and (max-width: 768px) {
+			body {
+				background-size: 100%;
+			}
+
+			header {
+				padding: 15px;
+				text-align: center;
+				background-color: rgba(255, 255, 255, 0.7);
+				border-radius: 0;
+			}
+
+			header .none {
+				font-size: 20px;
+			}
+
+			header img {
+				height: 60px;
+				width: 60px;
+			}
+
+			.container {
+				padding: 2%;
+				width: 90%;
+			}
+
+			.form {
+				width: 95%;
+				border-radius: 0.5rem;
+				backdrop-filter: blur(10px);
+			}
+
+			.text,
+			.signup {
+				font-size: 18px;
+			}
+
+			.input,
+			input {
+				padding: 1.5rem;
+			}
+
+			input {
+				font-size: 16px;
+				height: 60px;
+			}
+
+			.submit {
+				padding: 1.5rem;
+				font-size: 18px;
+			}
+
+			button {
+				width: 70%;
+				height: 50px;
+				font-variant: small-caps;
+			}
+
+			main {
+				flex-direction: column;
+			}
+
+			.purchase-image,
+			.container {
+				flex-basis: 100%;
+			}
+
+			.clicked-image {
+				margin: 5%;
+				display: block;
+			}
+
+			.selected-image {
+				width: 95%;
+				border-radius: 1rem;
+			}
+
+			.purch-amt {
+				width: 100%;
+				padding: 3%;
+				margin: 5% auto;
+			}
+		}
+	</style>
+</head>
+
+<body style="background-image: url(IMAGES/HOME-PAGE-BACKGROUND.jpg);">
+	<header>
+		<!-- <a href="home.html"><img src="images/crypto-icon-depositphotos-bgremover.png" alt="logo"></a> -->
+		<h1>
+			<nav>
+				<a href="index.html" class="none">Home</a>
+				<a href="collection.html" class="none">NFTs</a>
+				<a href="faq.html" class="none">Know More </a>
+				<a href="contact.html" class="none">Contact</a>
+			</nav>
+		</h1>
+	</header>
+
+	<main>
+		<div class="purchase-image">
+			<div class="clicked-image">
+				<img id="image-to-purchase" src="" alt="Selected Image" class="selected-image">
+			</div>
+
+			<div class="purch-amt">
+				<span class="amount">AMOUNT : 100,000$</span>
+			</div>
+		</div>
+		<div class="container">
+			<div class="form" id="form">
+				<form action="" onsubmit="return(validate())">
+					<div class="text sign">
+						<label class="signup">your details</label>
+					</div>
+
+					<hr style="color: #fff; margin: 20px 10px;">
+
+					<div class="text">
+						<label class="in-text">Name</label>
+					</div>
+					<div class="input">
+						<input type="text" name="name" id="name" placeholder="Name">
+					</div>
+
+					<div class="error">
+						<span id="name_error"></span>
+					</div>
+
+					<div class="text">
+						<label class="in-text">Email</label>
+					</div>
+					<div class="input">
+						<input type="text" name="email" id="email"
+							placeholder="Email">
+					</div>
+
+					<div class="error">
+						<span id="email_error"></span>
+					</div>
+
+					<div class="text">
+						<label class="in-text">password</label>
+					</div>
+					<div class="input">
+						<input type="password" name="password" id="password"
+							placeholder="Password">
+					</div>
+
+					<div class="error">
+						<span id="password_error"></span>
+					</div>
+
+					<div class="text">
+						<label class="in-text">re-enter password</label>
+					</div>
+					<div class="input">
+						<input type="password" name="r-password" id="r-password"
+							placeholder="re-enter your Password">
+					</div>
+
+					<div class="error">
+						<span id="confirm_password_error"></span>
+					</div>
+
+					<div class="submit">
+						<a href="confirm.html" class="btn"><input type="submit"
+								value="Purchase"></a>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</main>
+</body>
+
+<script>
+	function validate() {
+
+		var name = document.getElementById('name');
+		var n_error = document.getElementById('name_error');
+		n_check = "";
+
+		var email = document.getElementById('email');
+		var e_error = document.getElementById('email_error');
+		e_check = "";
+
+		var password = document.getElementById("password");
+		var p_error = document.getElementById("password_error");
+		p_check = "";
+
+		var confirm_pass = document.getElementById("r-password");
+		var confirm_error = document.getElementById("confirm_password_error");
+		var c_check = "";
+
+
+		if (name.value == "") {
+			n_error.innerHTML = "enter name !";
+			n_error.style.color = "red";
+			// password.style.borderBottom = "3px solid red";
+			name.style.borderBottom = "3px solid red"
+			n_check = false;
+		}
+
+		else {
+			var n_syntax = /^[a-zA-z]{5,30}$/
+			var match = n_syntax.test(name.value);
+
+			if (match) {
+				n_error.innerHTML = "";
+				// n_error.style.border = "3px solid green";
+				n_check = true;
+			}
+
+			else {
+				n_error, innerHTML = "please enter name in proper way ! ";
+				name.style.borderBottom = "3px solid red"
+				n_error.style.color = "red";
+				n_check = false;
+			}
+
+		}
+
+		if (email.value == "") {
+			e_error.innerHTML = "enter email !";
+			e_error.style.color = "red";
+			// password.style.borderBottom = "3px solid red";
+			email.style.borderBottom = "3px solid red"
+			e_check = false;
+		}
+
+		else {
+			var e_syntax = /^[\w\.]+@([\w]+\.)+[\w]{2,4}$/
+			var e_match = e_syntax.test(email.value);
+
+			if (e_match) {
+				e_error.innerHTML = "";
+				// e_error.style.border = "3px solid green";
+				e_check = true;
+			}
+
+			else {
+				e_error, innerHTML = "please email name in proper way ! ";
+				email.style.borderBottom = "3px solid red"
+				e_error.style.color = "red";
+				e_check = false;
+			}
+		}
+
+		//  
+
+		if (password.value == "") {
+			p_error.innerHTML = "enter password !";
+			p_error.style.color = "red";
+			// password.style.borderBottom = "3px solid red";
+			password.style.borderBottom = "3px solid red"
+			p_check = false;
+		}
+
+		else {
+			var p_syntax = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[^0-9A-Za-z])(?!.*\s).{8,20}$/
+			var p_match = p_syntax.test(password.value);
+
+			if (p_match) {
+				p_error.innerHTML = "";
+				// p_error.style.border = "3px solid green";
+				p_check = true;
+			}
+
+			else {
+				p_error.innerHTML = "please password name in proper way ! ";
+				password.style.borderBottom = "3px solid red"
+				p_error.style.color = "red";
+				p_check = false;
+			}
+		}
+
+		//
+
+		if (confirm_pass.value == "") {
+			confirm_error.innerHTML = "enter password !";
+			confirm_error.style.color = "red";
+			// password.style.borderBottom = "3px solid red";
+			confirm_pass.style.borderBottom = "3px solid red"
+			c_check = false;
+		}
+
+		else {
+
+			if (confirm_pass.value == password.value) {
+				confirm_error.innerHTML = "";
+				// confirm_error.style.border = "3px solid green";
+				c_check = true;
+			}
+
+			else {
+				confirm_error.innerHTML = " passowrd not mnatch ";
+				confirm_pass.style.borderBottom = "3px solid red"
+				confirm_error.style.color = "red";
+				c_check = false;
+			}
+		}
+
+		// 
+
+		if (n_check == true && e_check == true && p_check && c_check) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+</script>
+
+<script>
+	window.onload = function () {
+
+		const urlParams = new URLSearchParams(window.location.search);
+		const imageParam = urlParams.get('image');
+
+		const imageElement = document.getElementById('image-to-purchase');
+
+		imageElement.src = imageParam;
+
+	};
+</script>
+
+
+</html>
